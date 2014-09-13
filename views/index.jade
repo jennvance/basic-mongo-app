@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  form(action='/newVehicle')
+    input(type='text', placeholder='Vehicle Name...',
+      name='name')
+    input(type='text', placeholder='Vehicle Color...', 
+      name='color')
+    input(type='submit')
+  ul
+    for vehicle in vehicles
+      li #{vehicle.name} - #{vehicle.wheels}
+
+
